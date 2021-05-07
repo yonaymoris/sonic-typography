@@ -1,0 +1,128 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+/* body {
+  --background: #202020;
+  --accent: #FF80AB;
+  --size: calc(85vw / 35);
+  --margin: 2px;
+  
+  font-family: monospace;
+  margin: 0;
+  padding: 14px;
+  color: white;
+  background: var(--background);
+  font-size: 16px;
+  line-height: 1.5;
+} */
+
+h1 {
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: white;
+}
+a:hover {
+  background: var(--accent);
+  color: var(--background);
+}
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: none;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  line-height: 0;
+  letter-spacing: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 570px;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+.pixel {
+  background: #333333;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  height: calc(2 * var(--size));
+  width: var(--size);
+  margin: var(--margin);
+  max-width: 20px;
+  max-height: 40px;
+}
+
+.pixel:hover {
+  background: #5d5d5d !important;
+}
+
+.pixel.on {
+  background: var(--accent) !important;
+}
+
+.container .row .pixel:nth-child(4n+5), .container .row .pixel:first-of-type {
+  background: #404040;
+}
+
+.playing .pixel.active {
+  transform: scale(1.5);
+  z-index:10;
+}
+
+.playing .pixel.bar {
+  background: #5d5d5d !important;
+}
+  
+.button {
+  -webkit-appearance: none;
+  color: white;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 8px 16px;
+  border: 3px solid var(--accent);
+  background-color: transparent;
+  transition: background-color 0.2s;
+  font-family: inherit;
+  font-size: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  min-width: 100px;
+}
+
+.button:hover {
+  background: var(--accent);
+  color: var(--background);
+  border-color: var(--background);
+}
+  
+
+@media screen and (max-width: 700px) {
+  .container {
+    text-align: left;
+  }
+  body {
+    --margin: 1px;
+  }
+}

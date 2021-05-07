@@ -1,0 +1,15 @@
+{
+  "name": "text_to_music",
+  "version": "1.0.0",
+  "description": "Music generator based on the typeface",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yona Ngo",
+  "license": "ISC",
+  "dependencies": {
+    "opentype.js": "^1.3.3",
+    "p5": "^1.3.1"
+  }
+}
